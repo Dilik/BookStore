@@ -5,7 +5,7 @@ namespace BookStore.Repository
 {
     public class CoverTypeRepository : Repository<CoverType>, ICoverTypeRepository
     {
-        private readonly Context _db;
+        private Context _db;
         public CoverTypeRepository(Context  db) : base(db)
         {
             _db = db;

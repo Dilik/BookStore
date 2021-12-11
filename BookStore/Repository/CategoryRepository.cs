@@ -5,7 +5,7 @@ namespace BookStore.Repository
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        private readonly Context _db;
+        private Context _db;
         public CategoryRepository(Context  db) : base(db)
         {
             _db = db;
