@@ -31,6 +31,7 @@ namespace BookStore.Repository
         public void UpdateStripePaymentID(int id, string sessionId, string paymentIntentId)
         {
             var orderFromDB = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
+            orderFromDB.PaymentDate = DateTime.Now;
             orderFromDB.SessionId = sessionId;
             orderFromDB.PaymentIntentId = paymentIntentId;
         }
